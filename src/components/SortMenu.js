@@ -14,11 +14,20 @@ const SortMenu = (props) => {
   const [educationState, setEducationState] = useState('default') //default, asc, desc
   const [experienceState, setExperienceState] = useState('default') //default, asc, desc
 
+  const setAllDefault = () => {
+    setLocationState('default')
+    setRoleState('default')
+    setDepartamentState('default')
+    setEducationState('default')
+    setExperienceState('default')
+  }  
+
   const sortBy = (criteria) => {
     const jobscount = jobs.reduce((acc, el) => acc + el.total_jobs_in_hospital, 0)
     let jobsorted = []
     switch (criteria) {
       case 'Location':
+        setAllDefault()
         if (locationState === 'default') {
           setLocationState('asc')
           jobsorted = [...jobs].sort((a, b) => (a.items.location < b.items.location ? 1 : -1))
@@ -31,6 +40,7 @@ const SortMenu = (props) => {
         }
         break
       case 'Role':
+        setAllDefault()
         if (roleState === 'default') {
           setRoleState('asc')
           jobsorted = [...jobs].sort((a, b) => (a.job_title < b.job_title ? 1 : -1))
@@ -43,6 +53,7 @@ const SortMenu = (props) => {
         }
         break
       case 'Departament':
+        setAllDefault()
         if (departamentState === 'default') {
           setDepartamentState('asc')
           jobsorted = [...jobs].sort((a, b) => (a.items.departament < b.items.departament ? 1 : -1))
@@ -55,6 +66,7 @@ const SortMenu = (props) => {
         }
         break
       case 'Education':
+        setAllDefault()
         if (educationState === 'default') {
           setEducationState('asc')
           jobsorted = [...jobs].sort((a, b) => (a.items.required_skills < b.items.required_skills ? 1 : -1))
@@ -67,6 +79,7 @@ const SortMenu = (props) => {
         }
         break
       case 'Experience':
+        setAllDefault()
         if (experienceState === 'default') {
           setExperienceState('asc')
           jobsorted = [...jobs].sort((a, b) => (a.items.experience < b.items.experience ? 1 : -1))
