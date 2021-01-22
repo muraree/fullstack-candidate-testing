@@ -7,7 +7,7 @@ const Footer = () => {
           We are a team of nurses, doctors, technologistis and excecutives
           dedicated to help nurses find jobs that they love.
         </p>
-        <p>All copyright reserved &copy;2020 - Health Explore</p>
+        <p>All copyright reserved &copy;2021 - Health Explore</p>
       </div>
       <div className="col-md-3 footer-section">
         <h4>Sitemap</h4>
