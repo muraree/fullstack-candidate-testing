@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="row">
+    <footer className="row mx-auto">
       <div className="col-md-6 footer-section">
         <h4>About us</h4>
         <p>

@@ -29,7 +29,7 @@ const Header = props => {
           <span className="navbar-toggler-icon"><FaBars size={25} /></span>
         </button>
         <a className="navbar-brand brand-he-blue" href="/">
-          HEALTH EXPLOREvm
+          HEALTH EXPLORE
         </a>
         <div className="profile_pic show-on-mobile">
           JO
