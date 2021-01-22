@@ -1,5 +1,14 @@
 # fullstack-candidate-testing
 
+## Install npm packages and Build
+npm install && npm run build
+
+## Run Project
+npm run dev
+
+## Unit Test endpoints
+npm run test
+
 ## Instructions
 
 
