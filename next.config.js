@@ -15,7 +15,6 @@ module.exports = withCSS(
 
       return config
     },
+    target: "experimental-serverless-trace",
   })
 )
-
-module.exports = { target: "experimental-serverless-trace", };
