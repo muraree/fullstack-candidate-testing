@@ -1,18 +1,75 @@
 {
-  "name": "fullstack-candidate-testing",
-  "version": "0.1.0",
-  "private": true,
+  "name": "testproject",
+  "author": "Superstar-IT",
+  "license": "MIT",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js}\"",
+    "test": "jest"
   },
   "dependencies": {
-    "autoprefixer": "^10.2.3",
-    "next": "10.0.3",
-    "postcss": "^8.2.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "tailwindcss": "^2.0.2"
+    "@babel/preset-env": "^7.12.7",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.5.3",
+    "font-awesome": "^4.7.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^10.0.3",
+    "next-images": "^1.6.2",
+    "next-server": "^9.0.5",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^4.1.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "react-icons": "^4.1.0",
+    "react-modal": "^3.12.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "sass-loader": "^10.1.0",
+    "test-listen": "^1.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^10.0.1",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.5",
+    "@types/react": "^16.9.27",
+    "@types/testing-library__react": "^10.0.0",
+    "babel-jest": "^25.5.1",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "jest": "^25.5.4",
+    "jest-watch-typeahead": "^0.5.0",
+    "lint-staged": "^10.0.10",
+    "prettier": "^2.0.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.mjs$": "babel-jest",
+      "^.+\\.svelte$": "svelte-jester"
+    },
+    "transformIgnorePatterns": [
+      "src/node_modules/(?!@sapper)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "mjs",
+      "svelte"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/node_modules"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   }
 }
