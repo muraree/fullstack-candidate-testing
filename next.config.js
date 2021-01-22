@@ -17,3 +17,5 @@ module.exports = withCSS(
     },
   })
 )
+
+module.exports = { target: "experimental-serverless-trace", };
